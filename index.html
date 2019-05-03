@@ -4,7 +4,7 @@
   </head>
   <body>
     <p>Submit this out with any value first...</p>
-    <form action="logged-in.html" method="POST">
+    <form>
       <label>
         Username: <input type="text" name="username">
       </label>
@@ -15,5 +15,11 @@
       <br>
       <button type="submit">Login</button>
     </form>
+    <script>
+      document.querySelector('form').onsubmit = (e) => {
+        e.preventDefault();
+        document.location = 'logged-in.html';
+      };
+    </script>
   </body>
 </html>
