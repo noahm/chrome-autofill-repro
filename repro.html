@@ -3,14 +3,18 @@
     <title>Repro</title>
   </head>
   <body>
+    <p>Expected: nothing is auto-filled into the search input</p>
+    <p>Observed: the user's saved password filled and shown on screen</p>
     <label>
-      Unrelated search input:<br>
+      Unrelated search input with <code>autocomplete="off"</code>:<br>
       <input type="search" autocomplete="off">
     </label>
     <br>
     <label>
-      Readonly input with value provided by page:<br>
+      Readonly password-type input with value provided by page:<br>
       <input type="password" readonly value="notyourpassword">
     </label>
+    <br><br>
+    <a href="https://github.com/noahm/chrome-autofill-repro">Source Code</a>
   </body>
 </html>
